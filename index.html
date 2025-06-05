@@ -9,6 +9,9 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&display=swap"
             rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
         <link rel="stylesheet" href="style.css" />
         <title>Ben-Hur Dev</title>
     </head>
@@ -36,17 +39,21 @@
                 </ul>
                 <ul id="links-list">
                     <li>
-                        <a href="www.linkedin.com/in/bem-hur-kuchler"
+                        <a
+                            href="www.linkedin.com/in/bem-hur-kuchler"
+                            target="_blank"
                             ><img src="./github.svg"
                         /></a>
                     </li>
                     <li>
-                        <a href="www.linkedin.com/in/bem-hur-kuchler"
+                        <a
+                            href="www.linkedin.com/in/bem-hur-kuchler"
+                            target="_blank"
                             ><img src="./linkedin.svg"
                         /></a>
                     </li>
                     <li>
-                        <a href="mailto:benhurk2801@proton.me"
+                        <a href="mailto:benhurk2801@proton.me" target="_blank"
                             ><img src="./email.svg"
                         /></a>
                     </li>
@@ -55,28 +62,113 @@
         </header>
         <main>
             <section id="home">
-                <div>
-                    <h3>Landing page</h3>
-                    <p>Página moderna para portfólio, produto ou empresa.</p>
-                </div>
-                <div>
-                    <h3>Catálogo</h3>
-                    <p>
-                        Atraia clientes com um catálogo engajante e bonito para
-                        os seus produtos.
-                    </p>
-                </div>
-                <div>
-                    <h3>Sistemas e ferramentas</h3>
-                    <p>Ferramentas para facilitar ou automatizar tarefas.</p>
-                </div>
-                <div>
-                    <h3>Refatoração</h3>
-                    <p>Quer dar uma cara nova para seu site?</p>
-                </div>
+                <h2 class="section-title">O que procura?</h2>
+                <ul id="services-list">
+                    <li class="service-item">
+                        <div>
+                            <a
+                                class="service-example"
+                                href="https://whiskylogged.vercel.app/"
+                                target="_blank">
+                                <div class="example-overlay">
+                                    <i class="bi bi-box-arrow-up-right"></i>
+                                    Exemplo
+                                </div>
+                                <img src="./landing.png" />
+                            </a>
+                            <div class="service-body">
+                                <h3 class="service-title">
+                                    Sites Institucionais & Landing Pages
+                                </h3>
+                                <p class="service-description">
+                                    Desenvolvimento de sites modernos para
+                                    empresas, portfólios ou produtos.
+                                </p>
+                                <ul class="service-bullets">
+                                    <li>📲 Layout responsivo</li>
+                                    <li>⚛️ Tecnologias atuais</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="service-footer">
+                            <button class="service-button">
+                                Tenho interesse
+                            </button>
+                        </div>
+                    </li>
+                    <li class="service-item">
+                        <div>
+                            <a
+                                class="service-example"
+                                href="https://whiskylogged.vercel.app/"
+                                target="_blank">
+                                <div class="example-overlay">
+                                    <i class="bi bi-box-arrow-up-right"></i>
+                                    Exemplo
+                                </div>
+                                <img src="./whiskylogged.png" />
+                            </a>
+                            <div class="service-body">
+                                <h3 class="service-title">Catálogos</h3>
+                                <p class="service-description">
+                                    Atraia clientes com um catálogo engajante e
+                                    bonito para os seus produtos.
+                                </p>
+                                <ul class="service-bullets">
+                                    <li>🙂 Atenção com UX</li>
+                                    <li>
+                                        🔗 Integração com WhatsApp ou e-commerce
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="service-footer">
+                            <button class="service-button">
+                                Tenho interesse
+                            </button>
+                        </div>
+                    </li>
+                    <li class="service-item">
+                        <div>
+                            <a
+                                class="service-example"
+                                href="https://meuestoque.app.br/"
+                                target="_blank">
+                                <div class="example-overlay">
+                                    <i class="bi bi-box-arrow-up-right"></i>
+                                    Exemplo
+                                </div>
+                                <img src="./meuestoque.png" />
+                            </a>
+                            <div class="service-body">
+                                <h3 class="service-title">
+                                    Sistemas Personalizados
+                                </h3>
+                                <p class="service-description">
+                                    Desenvolvimento de sistemas focados em
+                                    otimizar processos, como gestão de estoque,
+                                    registros ou fluxos de trabalho.
+                                </p>
+                                <ul class="service-bullets">
+                                    <li>💻️ Multiplataforma</li>
+                                    <li>🔧 Suporte pós-entrega</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="service-footer">
+                            <button class="service-button">
+                                Tenho interesse
+                            </button>
+                        </div>
+                    </li>
+                </ul>
             </section>
-            <section id="projects"></section>
-            <section id="contact"></section>
+            <!-- <section id="projects">
+                <h2 class="section-title">Projetos em destaque</h2>
+            </section>
+            <section id="contact">
+                <h2 class="section-title">Contato</h2>
+            </section> -->
         </main>
         <script type="module" src="/src/main.js"></script>
     </body>
