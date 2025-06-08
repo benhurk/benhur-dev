@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="style.css" />
         <title>Ben-Hur Dev</title>
     </head>
-    <body class="container">
+    <body>
         <header>
             <div>
                 <img id="pic" src="./pfp.jpeg" alt="Picture" />
@@ -32,37 +32,37 @@
                 <div id="backend"></div>
             </div>
             <nav>
-                <ul id="nav-list">
-                    <li class="current"><a role="button" href="">Home</a></li>
-                    <li><a role="button" href="">Projetos</a></li>
-                    <li><a role="button" href="">Contato</a></li>
-                </ul>
-                <ul id="links-list">
-                    <li>
+                <div class="container">
+                    <div id="nav-links">
+                        <a href="#" class="current" data-section="home">Home</a>
+                        <a href="#projects" data-section="projects">Projetos</a>
+                        <a href="#contact" data-section="contact">Contato</a>
+                    </div>
+                    <div id="external-links">
                         <a
                             href="www.linkedin.com/in/bem-hur-kuchler"
                             target="_blank"
-                            ><img src="./github.svg"
+                            ><img
+                                src="./github.svg"
+                                alt="GitHub"
+                                class="hover-icon"
                         /></a>
-                    </li>
-                    <li>
+
                         <a
                             href="www.linkedin.com/in/bem-hur-kuchler"
                             target="_blank"
-                            ><img src="./linkedin.svg"
+                            ><img
+                                src="./linkedin.svg"
+                                alt="LinkedIn"
+                                class="hover-icon"
                         /></a>
-                    </li>
-                    <li>
-                        <a href="mailto:benhurk2801@proton.me" target="_blank"
-                            ><img src="./email.svg"
-                        /></a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </nav>
         </header>
         <main>
-            <section id="home">
-                <h2 class="section-title">O que procura?</h2>
+            <section id="home" class="active-section container">
+                <h2 class="section-title">O que eu faço</h2>
                 <ul id="services-list">
                     <li class="service-item">
                         <div>
@@ -111,11 +111,11 @@
                             <div class="service-body">
                                 <h3 class="service-title">Catálogos</h3>
                                 <p class="service-description">
-                                    Atraia clientes com um catálogo engajante e
-                                    bonito para os seus produtos.
+                                    Desenvolvimento de catálogos interativos e
+                                    engajantes para os seus produtos.
                                 </p>
                                 <ul class="service-bullets">
-                                    <li>🙂 Atenção com UX</li>
+                                    <li>🙂 Foco na experiência de usuário</li>
                                     <li>
                                         🔗 Integração com WhatsApp ou e-commerce
                                     </li>
@@ -163,13 +163,61 @@
                     </li>
                 </ul>
             </section>
-            <!-- <section id="projects">
+            <section id="projects" class="container">
                 <h2 class="section-title">Projetos em destaque</h2>
             </section>
-            <section id="contact">
+            <section id="contact" class="container">
                 <h2 class="section-title">Contato</h2>
-            </section> -->
+                <div id="contact-platforms">
+                    <div id="platforms-radios">
+                        <label
+                            ><span>
+                                <i class="bi bi-envelope-fill"></i> Email
+                            </span>
+                            <input
+                                type="radio"
+                                name="platform"
+                                value="email"
+                                checked
+                        /></label>
+                        <label
+                            ><span
+                                ><i class="bi bi-whatsapp"></i> WhatsApp</span
+                            >
+                            <input
+                                type="radio"
+                                name="platform"
+                                value="whatsapp"
+                        /></label>
+                    </div>
+                </div>
+                <div id="contact-wraper"></div>
+            </section>
         </main>
+        <footer>
+            <div class="container">
+                <span
+                    ><i class="bi bi-geo-alt-fill"></i> Santa Catarina, BR</span
+                >
+                <div id="contact-links">
+                    <a
+                        href="mailto:benhurk2801@proton.me"
+                        class="contact-link"
+                        target="_blank"
+                        ><img src="./email.svg" alt="email" class="hover-icon"
+                    /></a>
+                    <a
+                        href="mailto:benhurk2801@proton.me"
+                        class="contact-link"
+                        target="_blank"
+                        ><img
+                            src="./whatsapp.svg"
+                            alt="WhatsApp"
+                            class="hover-icon"
+                    /></a>
+                </div>
+            </div>
+        </footer>
         <script type="module" src="/src/main.js"></script>
     </body>
 </html>

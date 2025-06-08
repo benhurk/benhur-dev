@@ -7,7 +7,32 @@
     text-decoration: none;
     line-height: 1;
     outline: none;
+}
+
+body {
+    position: relative;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+button {
     border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.15);
+}
+
+textarea {
+    border: 1px solid #ccc;
+    resize: vertical;
+    padding: 0.875rem;
+    border-radius: 4px;
+    max-block-size: 20rem;
+    min-block-size: 5rem;
 }
 
 .container {
@@ -15,10 +40,24 @@
     margin-inline: auto;
 }
 
+.hover-icon {
+    transition: all 0.2s ease-in-out;
+}
+
+.hover-icon:hover {
+    transform: translateY(-2px);
+}
+
 .section-title {
-    font-size: 1.875rem;
+    font-size: 1.75rem;
     margin-bottom: 1rem;
     text-align: center;
+}
+
+.section-description {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
 }
 
 header {
@@ -26,20 +65,20 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-block: 1rem;
+    padding-top: 1rem;
 }
 
 #pic {
     display: block;
     border-radius: 100%;
-    width: 14rem;
-    height: 14rem;
+    width: 12rem;
+    height: 12rem;
     margin-inline: auto;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     margin-bottom: 0.25rem;
 }
 
@@ -61,28 +100,27 @@ h1 {
         flex-shrink: 0;
         background-color: whitesmoke;
         padding-inline: 0.25rem;
-        padding-block: 0.1rem;
+        padding-block: 0.125rem;
         border-radius: 8px;
     }
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
     background-color: whitesmoke;
-    padding-inline: 1rem;
-    padding-block: 0.25rem;
-    border-radius: 4px;
+    width: 100%;
 
-    ul {
+    .container {
         display: flex;
-        gap: 2rem;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: 0.5rem;
+        border-radius: 4px;
     }
 }
 
-#nav-list {
+#nav-links {
+    display: flex;
+    gap: 2rem;
     font-size: 1.25rem;
 
     a {
@@ -96,24 +134,30 @@ nav {
 
     .current {
         font-weight: 700;
+        color: dodgerblue;
     }
 }
 
-#links-list {
+#external-links {
+    display: flex;
+    gap: 1rem;
+
     img {
         width: 1.875rem;
         height: 1.875rem;
-        transition: all 0.2s ease-in-out;
-    }
-
-    img:hover {
-        transform: translateY(-2px);
     }
 }
 
 main {
-    padding-block: 1.5rem;
-    padding-inline: 0.5rem;
+    padding-block: 2rem;
+
+    section {
+        display: none;
+    }
+
+    .active-section {
+        display: block;
+    }
 }
 
 #services-list {
@@ -208,16 +252,96 @@ main {
             font-weight: 700;
             padding-block: 0.5rem;
             border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.2s ease-in-out;
-        }
-
-        .service-button:hover {
-            box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.15);
         }
     }
 
     .service-item:hover {
         transform: scale(105%);
+    }
+}
+
+#contact {
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        label {
+            font-size: 1.125rem;
+            width: 60%;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.5rem 0.75rem;
+            font-size: 1.125rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+            margin-bottom: 1rem;
+        }
+
+        textarea {
+            width: 60%;
+            margin-bottom: 1rem;
+            height: 10rem;
+            font-size: 1.125rem;
+        }
+
+        button {
+            background-color: #111;
+            color: white;
+            font-size: 1.125rem;
+            font-weight: 700;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+    }
+
+    #contact-platforms {
+        margin-bottom: 1.5rem;
+
+        #platforms-radios {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            font-size: 1.125rem;
+
+            label {
+                display: flex;
+                flex-direction: row-reverse;
+                gap: 0.5rem;
+                cursor: pointer;
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: whitesmoke;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: 1rem;
+    }
+
+    #contact-links {
+        display: flex;
+        gap: 1rem;
+
+        a {
+            img {
+                display: block;
+                width: 1.875rem;
+                height: 1.875rem;
+            }
+        }
     }
 }
