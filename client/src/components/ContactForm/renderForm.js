@@ -26,7 +26,7 @@ const WPP_FORM = `
     </form>
 `;
 
-export default function genContactForm(form, handleSubmit) {
+export default function renderForm(form, handleSubmit) {
     if (form === 'email' || !form) {
         document.getElementById('contact-wraper').innerHTML = EMAIL_FORM;
     }

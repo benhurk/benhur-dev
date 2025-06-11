@@ -1,0 +1,93 @@
+.service-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 32rem;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+
+    .service-body,
+    .service-footer {
+        padding: 0 0.75rem 0.75rem 0.75rem;
+    }
+
+    .service-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .service-description {
+        margin-bottom: 1rem;
+    }
+
+    .service-example {
+        position: relative;
+        display: block;
+        max-width: 100%;
+        margin-bottom: 1rem;
+
+        img {
+            display: block;
+            width: 100%;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .example-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            color: #fff;
+            font-weight: 700;
+            opacity: 0;
+            z-index: 10;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        .example-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            opacity: 0.6;
+            z-index: -10;
+        }
+    }
+
+    .service-example:hover {
+        .example-overlay {
+            opacity: 1;
+        }
+    }
+
+    .service-bullets {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .service-button {
+        width: 100%;
+        background-color: #111;
+        color: white;
+        font-size: 1.125rem;
+        font-weight: 700;
+        padding-block: 0.5rem;
+        border-radius: 4px;
+    }
+}
+
+.service-item:hover {
+    transform: scale(105%);
+}

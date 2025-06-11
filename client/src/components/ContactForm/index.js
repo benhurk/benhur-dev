@@ -1,9 +1,9 @@
-import emailPost from './helpers/emailPost';
-import genContactForm from './helpers/html-gen/contact-form';
+import emailPost from '../../helpers/emailPost';
+import renderForm from './renderForm';
 
 const WPP_NUM = '5547996825217';
 
-export default function contact() {
+export default function ContactForm() {
     let selectedRadio = document.querySelector(
         'input[name="platform"]:checked'
     );
@@ -34,7 +34,7 @@ export default function contact() {
         }
     }
 
-    genContactForm(selectedRadio.value, handleSubmit);
+    renderForm(selectedRadio.value, handleSubmit);
 
     document.querySelectorAll('input[name="platform"]').forEach((radio) => {
         radio.addEventListener('change', (e) => {
@@ -45,7 +45,7 @@ export default function contact() {
                 .getElementById('contact-form')
                 .removeEventListener('submit', handleSubmit);
 
-            genContactForm(selectedRadio.value, handleSubmit);
+            renderForm(selectedRadio.value, handleSubmit);
         });
     });
 }

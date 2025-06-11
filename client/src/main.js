@@ -1,6 +1,7 @@
 import nav from './nav';
-import contact from './contact';
-import genTechStack from './helpers/html-gen/tech-stack';
+import ContactForm from './components/ContactForm';
+import TechStackList from './components/TechStackList';
+import ServicesCards from './components/ServicesCards';
 
 document.addEventListener('DOMContentLoaded', () => {
     const activeSection = window.location.hash.substring(1);
@@ -11,15 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
             .querySelector(`#nav-links a[data-section="${activeSection}"]`)
             .classList.add('nav-current');
     } else {
-        //Apply class for the first element
+        //Apply nav classes for the first elements
         document
             .querySelector('main > section')
             .classList.add('active-section');
         document.querySelector('#nav-links a').classList.add('nav-current');
     }
 
-    genTechStack();
-    contact();
-});
+    nav();
 
-nav();
+    TechStackList();
+    ServicesCards();
+    ContactForm();
+});
