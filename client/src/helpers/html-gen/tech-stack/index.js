@@ -29,16 +29,16 @@ function generateHTML(array) {
     return array
         .map(
             (tech) => `
-        <div class="tech">
-            <span class="tech-name">${tech.name}</span>
-            <img src="${tech.logo}" alt="${tech.name}" />
-        </div>
-        `
+              <div class="tech">
+                  <span class="tech-name">${tech.name}</span>
+                  <img src="${tech.logo}" alt="${tech.name}" />
+              </div>
+              `
         )
         .join('');
 }
 
-export function TechStack() {
+export default function genTechStack() {
     document.querySelector('#fullstack').innerHTML = generateHTML(FULLSTACK);
     document.querySelector('#frontend').innerHTML = generateHTML(FRONTEND);
     document.querySelector('#test').innerHTML = generateHTML(TEST);

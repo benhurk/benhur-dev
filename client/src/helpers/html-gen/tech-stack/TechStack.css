@@ -1,3 +1,15 @@
+#stack {
+    div {
+        display: flex;
+        gap: 0.325rem;
+        flex-shrink: 0;
+        background-color: whitesmoke;
+        padding-inline: 0.25rem;
+        padding-block: 0.125rem;
+        border-radius: 8px;
+    }
+}
+
 .tech {
     position: relative;
     width: 3rem;
