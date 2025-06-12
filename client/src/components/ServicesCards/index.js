@@ -5,14 +5,14 @@ export default function ServicesCards() {
     const html = services
         .map(
             (service) => `
-              <li class="service-item">
+              <li class="service-item hover-card">
                   <div>
                       <a class="service-example" href="${service.exampleLink}" target="_blank">
                           <div class="example-overlay">
                               <i class="bi bi-box-arrow-up-right"></i>
                               Exemplo
                           </div>
-                          <img src="${service.img}" />
+                          <img src="${service.img}" alt="${service.title} example" loading="lazy" />
                       </a>
                       <div class="service-body">
                           <h3 class="service-title">${service.title}</h3>

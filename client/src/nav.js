@@ -2,8 +2,10 @@ const navButtons = document.querySelectorAll('#nav-links a');
 
 export default function nav() {
     navButtons.forEach((nav) => {
-        nav.addEventListener('click', () => {
+        nav.addEventListener('click', (e) => {
+            e.preventDefault();
             const targetSection = nav.dataset.section;
+            window.location.hash = targetSection;
 
             document
                 .querySelector('.nav-current')

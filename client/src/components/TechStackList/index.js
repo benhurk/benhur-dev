@@ -9,7 +9,7 @@ export default function TechStackList() {
               ${stack
                   .map(
                       (tech) => `
-                      <div class="tech">
+                      <div class="tech hover-icon">
                           <span class="tech-name">${tech.name}</span>
                           <img src="${tech.logo}" alt="${tech.name}" />
                       </div>

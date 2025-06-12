@@ -2,6 +2,7 @@ import nav from './nav';
 import ContactForm from './components/ContactForm';
 import TechStackList from './components/TechStackList';
 import ServicesCards from './components/ServicesCards';
+import ProjectsList from './components/ProjectsList';
 
 document.addEventListener('DOMContentLoaded', () => {
     const activeSection = window.location.hash.substring(1);
@@ -23,5 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     TechStackList();
     ServicesCards();
+    ProjectsList();
     ContactForm();
 });

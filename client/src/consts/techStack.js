@@ -1,27 +1,27 @@
 const techStack = {
     fullstack: [
-        { name: 'Next.js', logo: './next.svg' },
-        { name: 'TypeScript', logo: './typescript.svg' },
-        { name: 'JavaScript', logo: './javascript.svg' },
+        { name: 'Next.js', logo: './icons/next.svg' },
+        { name: 'TypeScript', logo: './icons/typescript.svg' },
+        { name: 'JavaScript', logo: './icons/javascript.svg' },
     ],
 
     frontend: [
-        { name: 'React', logo: './react.svg' },
-        { name: 'Tailwind CSS', logo: './tailwind.svg' },
-        { name: 'Vite', logo: './vite.svg' },
-        { name: 'HTML', logo: './html.svg' },
-        { name: 'CSS', logo: './css.svg' },
-        { name: 'Sass / Scss', logo: './sass.svg' },
+        { name: 'React', logo: './icons/react.svg' },
+        { name: 'Tailwind CSS', logo: './icons/tailwind.svg' },
+        { name: 'Vite', logo: './icons/vite.svg' },
+        { name: 'HTML', logo: './icons/html.svg' },
+        { name: 'CSS', logo: './icons/css.svg' },
+        { name: 'SCSS', logo: './icons/sass.svg' },
     ],
 
     teste: [
-        { name: 'Cypress', logo: './cypress.svg' },
-        { name: 'Jest', logo: './jest.svg' },
+        { name: 'Cypress', logo: './icons/cypress.svg' },
+        { name: 'Jest', logo: './icons/jest.svg' },
     ],
 
     backend: [
-        { name: 'Node.js', logo: './node.svg' },
-        { name: 'PostgreSQL', logo: './postgresql.svg' },
+        { name: 'Node.js', logo: './icons/node.svg' },
+        { name: 'PostgreSQL', logo: './icons/postgresql.svg' },
     ],
 };
 

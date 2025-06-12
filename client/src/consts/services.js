@@ -1,7 +1,7 @@
 const services = [
     {
         title: 'Sites Institucionais & Landing Pages',
-        img: './landing.png',
+        img: './images/landing.png',
         exampleLink: 'https://whiskylogged.vercel.app/',
         description:
             'Desenvolvimento de sites modernos para empresas, portfólios ou produtos.',
@@ -9,7 +9,7 @@ const services = [
     },
     {
         title: 'Catálogos',
-        img: './whiskylogged.png',
+        img: './images/whiskylogged.png',
         exampleLink: 'https://whiskylogged.vercel.app/',
         description:
             'Desenvolvimento de catálogos interativos e engajantes para os seus produtos.',
@@ -17,7 +17,7 @@ const services = [
     },
     {
         title: 'Sistemas Personalizados',
-        img: './meuestoque.png',
+        img: './images/meuestoque.png',
         exampleLink: 'https://meuestoque.app.br/',
         description:
             'Desenvolvimento de sistemas focados em otimizar processos, como gestão de estoque, registros ou fluxos de trabalho.',
