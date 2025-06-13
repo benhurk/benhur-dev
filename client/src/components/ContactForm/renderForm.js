@@ -27,12 +27,21 @@ const WPP_FORM = `
 `;
 
 export default function renderForm(form, handleSubmit) {
+    const existingFormMessage = document.querySelector(
+        'textarea[name="message"]'
+    )?.value;
+
     if (form === 'email' || !form) {
         document.getElementById('contact-wraper').innerHTML = EMAIL_FORM;
     }
 
     if (form === 'whatsapp') {
         document.getElementById('contact-wraper').innerHTML = WPP_FORM;
+    }
+
+    if (existingFormMessage) {
+        document.querySelector('textarea[name="message"]').value =
+            existingFormMessage;
     }
 
     document

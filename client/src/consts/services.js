@@ -1,6 +1,6 @@
 const services = [
     {
-        title: 'Sites Institucionais & Landing Pages',
+        title: 'Site Institucional / Landing Page',
         img: './images/landing.png',
         exampleLink: 'https://whiskylogged.vercel.app/',
         description:
@@ -8,7 +8,7 @@ const services = [
         highlight: '📲 Design responsivo',
     },
     {
-        title: 'Catálogos',
+        title: 'Catálogo',
         img: './images/whiskylogged.png',
         exampleLink: 'https://whiskylogged.vercel.app/',
         description:
@@ -16,7 +16,7 @@ const services = [
         highlight: '🔗 Integração com WhatsApp ou e-commerce',
     },
     {
-        title: 'Sistemas Personalizados',
+        title: 'Sistema Personalizado',
         img: './images/meuestoque.png',
         exampleLink: 'https://meuestoque.app.br/',
         description:

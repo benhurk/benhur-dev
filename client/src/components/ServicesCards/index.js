@@ -2,9 +2,8 @@ import './ServicesCards.css';
 import services from '../../consts/services';
 
 export default function ServicesCards() {
-    const html = services
-        .map(
-            (service) => `
+    services.forEach((service) => {
+        document.getElementById('services-list').innerHTML += `
               <li class="service-item hover-card">
                   <div>
                       <a class="service-example" href="${service.exampleLink}" target="_blank">
@@ -21,12 +20,24 @@ export default function ServicesCards() {
                       </div>
                   </div>
                   <div class="service-footer">
-                      <button class="service-button">Tenho interesse</button>
+                      <button class="service-button" data-service="${service.title}">Tenho interesse</button>
                   </div>
               </li>
-            `
-        )
-        .join('');
+            `;
+    });
 
-    document.getElementById('services-list').innerHTML = html;
+    document.querySelectorAll('.service-button').forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+            const service = services.filter(
+                (s) => s.title === e.target.dataset.service
+            )[0];
+
+            document.querySelector('textarea[name="message"]').value =
+                `Olá, tenho interesse em um ${service.title} ...`;
+
+            document
+                .querySelector('#nav-links a[data-section="contact"]')
+                .click();
+        });
+    });
 }
