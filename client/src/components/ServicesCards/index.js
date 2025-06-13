@@ -32,12 +32,12 @@ export default function ServicesCards() {
                 (s) => s.title === e.target.dataset.service
             )[0];
 
-            document.querySelector('textarea[name="message"]').value =
-                `Olá, tenho interesse em um ${service.title} ...`;
-
             document
                 .querySelector('#nav-links a[data-section="contact"]')
                 .click();
+
+            document.querySelector('textarea[name="message"]').value =
+                `Olá, tenho interesse em um ${service.title} ...`;
         });
     });
 }

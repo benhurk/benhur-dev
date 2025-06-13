@@ -1,4 +1,5 @@
 import emailPost from '../../helpers/emailPost';
+import validateContactForm from '../../helpers/validateContactForm';
 import renderForm from './renderForm';
 
 const WPP_NUM = '5547996825217';
@@ -15,11 +16,21 @@ export default function ContactForm() {
             const formData = new FormData(e.target);
             const data = {
                 email: formData.get('email'),
+                name: formData.get('name'),
                 message: formData.get('message'),
             };
 
-            await emailPost(data);
-            e.target.reset();
+            const validate = validateContactForm(data.email, data.name);
+
+            if (validate.success) {
+                await emailPost(data);
+                e.target.reset();
+            } else {
+                const resultP = document.getElementById('contact-result');
+                resultP.style.display = 'block';
+                resultP.textContent = validate.message || '';
+                resultP.className = 'fail';
+            }
         }
 
         if (selectedRadio.value === 'whatsapp') {

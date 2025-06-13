@@ -6,6 +6,10 @@ const EMAIL_FORM = `
             Seu email:
             <input type="email" name="email" placeholder="email@exemplo.com" />
         </label>
+        <label id="name-field">
+            Seu nome:
+            <input type="text" name="name" placeholder="Wink wink" />
+        </label>
         <label id="message-field">
             Mensagem:
             <textarea name="message" placeholder="Sua mensagem..."></textarea>
@@ -22,7 +26,7 @@ const WPP_FORM = `
             Mensagem:
             <textarea name="message" placeholder="Sua mensagem..."></textarea>
         </label>
-        <button id="contact-submit" type="submit">Enviar</button>
+        <button id="contact-submit" type="submit">Abrir WhatsApp</button>
     </form>
 `;
 

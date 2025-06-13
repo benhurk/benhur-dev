@@ -3,9 +3,15 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 32rem;
-    background-color: whitesmoke;
+    background: linear-gradient(
+        90deg,
+        var(--color-light2) 0%,
+        var(--color-light3) 50%,
+        var(--color-light2) 100%
+    );
     border-radius: 8px;
     overflow: hidden;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.25));
 
     .service-body,
     .service-footer {
@@ -19,6 +25,11 @@
 
     .service-description {
         margin-bottom: 1rem;
+    }
+
+    .service-highlight {
+        color: var(--color-orange);
+        font-weight: 700;
     }
 
     .service-example {
@@ -36,16 +47,10 @@
         }
     }
 
-    .service-bullets {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
     .service-button {
         width: 100%;
-        background-color: #111;
-        color: white;
+        background-color: var(--color-dark2);
+        color: var(--color-light3);
         font-size: 1.125rem;
         font-weight: 700;
         padding-block: 0.5rem;

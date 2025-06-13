@@ -18,25 +18,25 @@ export default function ProjectsList() {
                   </div>
                   <img class="project-img" src="${pr.thumbnail}" alt="${pr.name}" loading="lazy">
                 </a>
-                <div class="project-body">
+                <div class="project-content">
                   <div class="project-text">
-                    <div class="project-title">
-                      <a href="${pr.link}" target="_blank" class="project-name">${pr.name}</a>
-                      <span class="project-tag">${pr.tag}</span>
-                    </div>
+                    <a href="${pr.link}" target="_blank" class="project-name">${pr.name}</a>
                     <p class="project-description">${pr.description}</p>
                   </div>
-                  <ul class="project-stack">
-                    ${techs
-                        .map(
-                            (tech) => `
-                        <li class="project-tech">
-                          <img class="hover-icon" src="${tech.logo}" alt="${tech.name}" loading="lazy">
-                        </li>
-                      `
-                        )
-                        .join('')}
-                  </ul>
+                  <div class="project-footer">
+                    <ul class="project-stack">
+                      ${techs
+                          .map(
+                              (tech) => `
+                          <li class="project-tech">
+                            <img class="hover-icon" src="${tech.logo}" alt="${tech.name}" loading="lazy">
+                          </li>
+                        `
+                          )
+                          .join('')}
+                    </ul>
+                    <span class="project-tag">${pr.tag}</span>
+                  </div>
                 </div>
               </li>
         `;

@@ -14,11 +14,6 @@ const techStack = {
         { name: 'SCSS', logo: './icons/sass.svg' },
     ],
 
-    teste: [
-        { name: 'Cypress', logo: './icons/cypress.svg' },
-        { name: 'Jest', logo: './icons/jest.svg' },
-    ],
-
     backend: [
         { name: 'Node.js', logo: './icons/node.svg' },
         { name: 'PostgreSQL', logo: './icons/postgresql.svg' },

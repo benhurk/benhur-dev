@@ -1,8 +1,5 @@
+import loadComponents from './loadComponents';
 import nav from './nav';
-import ContactForm from './components/ContactForm';
-import TechStackList from './components/TechStackList';
-import ServicesCards from './components/ServicesCards';
-import ProjectsList from './components/ProjectsList';
 
 document.addEventListener('DOMContentLoaded', () => {
     const activeSection = window.location.hash.substring(1);
@@ -20,10 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('#nav-links a').classList.add('nav-current');
     }
 
-    nav();
-
-    TechStackList();
-    ServicesCards();
-    ProjectsList();
-    ContactForm();
+    nav(activeSection);
+    loadComponents(activeSection);
 });
