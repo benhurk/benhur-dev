@@ -49,11 +49,5 @@
 
     .service-button {
         width: 100%;
-        background-color: var(--color-dark2);
-        color: var(--color-light3);
-        font-size: 1.125rem;
-        font-weight: 700;
-        padding-block: 0.5rem;
-        border-radius: 4px;
     }
 }

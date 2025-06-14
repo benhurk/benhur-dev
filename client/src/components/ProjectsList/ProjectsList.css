@@ -48,6 +48,10 @@
             margin-bottom: 0.75rem;
         }
 
+        .project-name:hover {
+            text-decoration: underline;
+        }
+
         .project-footer {
             display: flex;
             justify-content: space-between;
