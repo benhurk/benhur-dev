@@ -4,9 +4,8 @@ import ProjectsList from './components/ProjectsList';
 import ContactForm from './components/ContactForm';
 
 export default function loadComponents(activeSection) {
-    TechStackList();
-
     if (activeSection === 'home' || !activeSection) {
+        TechStackList();
         ServicesCards();
     }
 

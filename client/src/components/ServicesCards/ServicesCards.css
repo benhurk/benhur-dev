@@ -11,7 +11,7 @@
     );
     border-radius: 8px;
     overflow: hidden;
-    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.15));
 
     .service-body,
     .service-footer {
@@ -25,6 +25,7 @@
 
     .service-description {
         margin-bottom: 1rem;
+        color: var(--color-dark4);
     }
 
     .service-highlight {
