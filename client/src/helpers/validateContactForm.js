@@ -1,4 +1,4 @@
-export default function validateContactForm(email, honey) {
+export default function validateContactForm(email, message, honey) {
     const emailRegex =
         /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -12,6 +12,10 @@ export default function validateContactForm(email, honey) {
 
     if (!emailRegex.test(email))
         return { success: false, message: 'Email inválido.' };
+
+    if (!message) {
+        return { success: false, message: 'Escreva uma mensagem.' };
+    }
 
     return { success: true };
 }

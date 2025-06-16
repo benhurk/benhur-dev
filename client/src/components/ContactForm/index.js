@@ -1,8 +1,7 @@
 import emailPost from '../../helpers/emailPost';
 import validateContactForm from '../../helpers/validateContactForm';
 import renderForm from './renderForm';
-
-const WPP_NUM = '5547996825217';
+import { WPP_NUM } from '../../consts/CONSTS';
 
 export default function ContactForm() {
     let selectedRadio = document.querySelector(
@@ -20,7 +19,11 @@ export default function ContactForm() {
                 message: formData.get('message'),
             };
 
-            const validate = validateContactForm(data.email, data.name);
+            const validate = validateContactForm(
+                data.email,
+                data.message,
+                data.name
+            );
 
             if (validate.success) {
                 await emailPost(data);

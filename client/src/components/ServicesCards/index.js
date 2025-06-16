@@ -1,9 +1,12 @@
+import { animate, inView } from 'motion';
+
 import './ServicesCards.css';
 import services from '../../consts/services';
 
 export default function ServicesCards() {
-    services.forEach((service) => {
-        document.getElementById('services-list').innerHTML += `
+    const html = services
+        .map(
+            (service) => `
               <li class="service-item hover-card">
                   <div>
                       <a class="service-example" href="${service.exampleLink}" target="_blank">
@@ -23,8 +26,11 @@ export default function ServicesCards() {
                       <button class="service-button" data-service="${service.title}">Tenho interesse</button>
                   </div>
               </li>
-            `;
-    });
+            `
+        )
+        .join('');
+
+    document.getElementById('services-list').innerHTML = html;
 
     document.querySelectorAll('.service-button').forEach((btn) => {
         btn.addEventListener('click', (e) => {
@@ -39,5 +45,18 @@ export default function ServicesCards() {
             document.querySelector('textarea[name="message"]').value =
                 `Olá, tenho interesse em um ${service.title} ...`;
         });
+    });
+
+    inView('.service-item', (element) => {
+        animate(
+            element,
+            { opacity: 1, y: [10, 0] },
+            {
+                duration: 0.3,
+                easing: [0.17, 0.55, 0.55, 1],
+            }
+        );
+
+        return () => animate(element, { opacity: 0, y: 10 });
     });
 }

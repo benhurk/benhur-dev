@@ -2,7 +2,7 @@ const projects = [
     {
         name: 'Meu Estoque',
         description:
-            'Aplicação para controle de estoque com funcionalidades de exportação e compartilhamento. Projetada para facilitar a comunicação e organização de itens relacionados ao trabalho.',
+            'Sistema de controle de estoque com funcionalidades de comunicação projetado para facilitar a organização de itens relacionados ao trabalho.',
         tag: 'Sistema Personalizado',
         thumbnail: './images/meuestoque.png',
         link: 'https://meuestoque.app.br/',
@@ -11,7 +11,7 @@ const projects = [
     {
         name: 'WhiskyLogged',
         description:
-            'Site de catálogo e review de bebidas. Foco na apresentação dos produtos e experiência de usuário fluida e engajante.',
+            'Site de catálogo com foco na apresentação dos produtos e experiência de usuário fluida e interativa.',
         tag: 'Catálogo',
         thumbnail: './images/whiskylogged.png',
         link: 'https://whiskylogged.vercel.app/',
@@ -20,7 +20,7 @@ const projects = [
     {
         name: 'Steam Pick',
         description:
-            'Uma ferramenta de automação para análise e geração personalizada de recomendações de jogos para usuários do Steam.',
+            'Uma ferramenta de automação para análise de perfil e geração personalizada de recomendações de jogos para usuários do Steam.',
         tag: 'Sistema Personalizado',
         thumbnail: './images/steampick.png',
         link: 'https://www.steampick.com/',
@@ -28,7 +28,8 @@ const projects = [
     },
     {
         name: 'Landing',
-        description: '',
+        description:
+            'Página de conversão responsiva e moderna projetada para capturar a atenção do público-alvo',
         tag: 'Landing Page',
         thumbnail: './images/landing.png',
         link: '',

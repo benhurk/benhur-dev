@@ -4,15 +4,15 @@ const services = [
         img: './images/landing.png',
         exampleLink: 'https://whiskylogged.vercel.app/',
         description:
-            'Desenvolvimento de sites modernos para empresas, portfólios ou produtos.',
-        highlight: '📲 Design responsivo',
+            'Desenvolvimento de sites modernos para apresentação de serviços, portfólios ou produtos.',
+        highlight: '🎨 Design personalizado',
     },
     {
-        title: 'Catálogo',
+        title: 'Site de Catálogo',
         img: './images/whiskylogged.png',
         exampleLink: 'https://whiskylogged.vercel.app/',
         description:
-            'Desenvolvimento de catálogos interativos e engajantes para os seus produtos.',
+            'Desenvolvimento de catálogos interativos para mostrar seus serviços ou produtos de forma elegante.',
         highlight: '🔗 Integração com WhatsApp ou e-commerce',
     },
     {

@@ -4,7 +4,6 @@
     justify-content: space-between;
     min-height: 32rem;
     background: linear-gradient(
-        90deg,
         var(--color-light2) 0%,
         var(--color-light3) 50%,
         var(--color-light2) 100%
@@ -29,7 +28,7 @@
     }
 
     .service-highlight {
-        color: var(--color-orange);
+        color: var(--color-blue2);
         font-weight: 700;
     }
 

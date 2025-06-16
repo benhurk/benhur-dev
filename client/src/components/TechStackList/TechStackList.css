@@ -36,7 +36,7 @@
         transform: translate(-50%, -100%);
         text-wrap: nowrap;
         pointer-events: none;
-        background-color: var(--color-dark4);
+        background-color: var(--color-dark3);
         color: #fff;
         font-weight: 700;
         padding-inline: 0.2rem;

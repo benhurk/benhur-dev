@@ -1,3 +1,5 @@
+import { animate, inView } from 'motion';
+
 import './ProjectsList.css';
 import projects from '../../consts/projects';
 import techStack from '../../consts/techStack';
@@ -20,8 +22,9 @@ export default function ProjectsList() {
                 </a>
                 <div class="project-content">
                   <div class="project-text">
-                    <a href="${pr.link}" target="_blank" class="project-name">${pr.name}</a>
+                    <h3 class="project-name">${pr.name}</h3>
                     <p class="project-description">${pr.description}</p>
+                    <a href="${pr.link}" target="_blank">Ir ao site <i class="bi bi-box-arrow-up-right"></i></a>
                   </div>
                   <div class="project-footer">
                     <ul class="project-stack">
@@ -44,4 +47,17 @@ export default function ProjectsList() {
         .join('');
 
     document.getElementById('projects-list').innerHTML = html;
+
+    inView('.project', (element) => {
+        animate(
+            element,
+            { opacity: 1, x: [-25, 0] },
+            {
+                duration: 0.5,
+                easing: [0.17, 0.55, 0.55, 1],
+            }
+        );
+
+        return () => animate(element, { opacity: 0, x: -25 });
+    });
 }

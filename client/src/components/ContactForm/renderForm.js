@@ -24,9 +24,9 @@ const WPP_FORM = `
     <form id="contact-form">
         <label id="message-field">
             Mensagem:
-            <textarea name="message" placeholder="Sua mensagem..."></textarea>
+            <textarea name="message" placeholder="Sua mensagem... (Opcional)"></textarea>
         </label>
-        <button id="contact-submit" type="submit">Ir ao WhatsApp</button>
+        <button id="contact-submit" type="submit">Abrir WhatsApp</button>
     </form>
 `;
 
