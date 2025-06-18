@@ -21,8 +21,11 @@ export default function ProjectsList() {
                   <img class="project-img" src="${pr.thumbnail}" alt="${pr.name}" loading="lazy">
                 </a>
                 <div class="project-content">
-                  <div class="project-text">
+                  <div class="project-header">
                     <h3 class="project-name">${pr.name}</h3>
+                    <span class="project-tag">${pr.tag}</span>
+                  </div>
+                  <div class="project-text">
                     <p class="project-description">${pr.description}</p>
                     <a href="${pr.link}" target="_blank">Ir ao site <i class="bi bi-box-arrow-up-right"></i></a>
                   </div>
@@ -38,7 +41,6 @@ export default function ProjectsList() {
                           )
                           .join('')}
                     </ul>
-                    <span class="project-tag">${pr.tag}</span>
                   </div>
                 </div>
               </li>

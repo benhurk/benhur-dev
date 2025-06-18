@@ -8,10 +8,8 @@ const techStack = {
     frontend: [
         { name: 'React', logo: './icons/react.svg' },
         { name: 'Tailwind CSS', logo: './icons/tailwind.svg' },
-        { name: 'Vite', logo: './icons/vite.svg' },
         { name: 'HTML', logo: './icons/html.svg' },
         { name: 'CSS', logo: './icons/css.svg' },
-        { name: 'SCSS', logo: './icons/sass.svg' },
     ],
 
     backend: [

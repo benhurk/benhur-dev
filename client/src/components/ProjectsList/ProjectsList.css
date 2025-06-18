@@ -16,10 +16,19 @@
     overflow: hidden;
     filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.15));
 
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
     .project-thumbnail {
         display: block;
         position: relative;
         max-width: 24rem;
+
+        @media (max-width: 768px) {
+            max-width: 100%;
+        }
 
         .project-img {
             display: block;
@@ -30,24 +39,57 @@
 
     .project-content {
         width: 100%;
-        padding-block: 0.5rem;
+        padding-block: 0.75rem;
         padding-right: 1rem;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+
+        @media (max-width: 768px) {
+            padding-bottom: 0.5rem;
+            padding-inline: 0.5rem;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 0.875rem;
+
+            .project-name {
+                display: block;
+                font-size: 1.25rem;
+                font-weight: 700;
+            }
+
+            .project-tag {
+                background-color: var(--color-pink);
+                color: #fff;
+                font-weight: 700;
+                padding: 0.125rem 0.25rem;
+                border-radius: 4px;
+                font-size: 0.875rem;
+                align-self: start;
+
+                @media (max-width: 768px) {
+                    align-self: center;
+                }
+            }
+        }
 
         .project-text {
-            align-self: start;
-
+            flex-grow: 1;
             a {
                 display: flex;
                 align-content: center;
                 gap: 0.5rem;
                 color: var(--color-blue);
                 font-weight: 700;
+                margin-bottom: 2rem;
+
+                @media (max-width: 768px) {
+                    font-size: 1.125rem;
+                }
 
                 .bi {
                     font-size: 0.75rem;
@@ -57,13 +99,6 @@
             a:hover {
                 text-decoration: underline;
             }
-        }
-
-        .project-name {
-            display: block;
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
         }
 
         .project-description {
@@ -76,6 +111,7 @@
             justify-content: space-between;
             align-items: center;
             width: 100%;
+            justify-self: end;
 
             .project-stack {
                 display: flex;
@@ -91,15 +127,6 @@
                         filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.125));
                     }
                 }
-            }
-
-            .project-tag {
-                background-color: var(--color-orange);
-                color: #fff;
-                font-weight: 700;
-                padding: 0.125rem 0.25rem;
-                border-radius: 4px;
-                font-size: 0.875rem;
             }
         }
     }

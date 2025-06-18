@@ -13,6 +13,10 @@
         width: 60%;
         margin-bottom: 0.5rem;
 
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+
         input {
             width: 100%;
             padding: 0.5rem 0.75rem;
@@ -26,6 +30,10 @@
         margin-inline: auto;
         margin-bottom: 1rem;
         font-size: 1.125rem;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
 
         textarea {
             display: block;
@@ -43,7 +51,7 @@
     }
 
     #contact-result.success {
-        color: var(--color-green);
+        color: var(--color-darkgreen);
     }
 
     #contact-result.fail {

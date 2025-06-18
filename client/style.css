@@ -15,9 +15,9 @@
     --color-blue: dodgerblue;
     --color-blue2: #5e81ac;
     --color-blue3: #81a1c1;
-    --color-orange: #d08770;
     --color-pink: #b48ead;
-    --color-green: teal;
+    --color-green: #8fbcbb;
+    --color-darkgreen: teal;
     --color-red: #bf616a;
 }
 
@@ -44,11 +44,15 @@ body {
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
     background: linear-gradient(
-        90deg,
-        var(--color-light1) 0%,
-        var(--color-light2) 50%,
+        45deg,
+        var(--color-light2) 0%,
         var(--color-light1) 100%
     );
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 button {
@@ -94,12 +98,23 @@ textarea:focus {
 }
 
 p {
-    line-height: 1.25;
+    line-height: 1.4;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.35;
 }
 
 .container {
     max-width: 1024px;
     margin-inline: auto;
+
+    @media (max-width: 768px) {
+        max-width: 90%;
+    }
 }
 
 .hover-icon {
@@ -169,7 +184,7 @@ p {
     text-align: center;
     font-size: 1.25rem;
     color: var(--color-dark4);
-    font-weight: 700;
+    margin-bottom: 2rem;
 }
 
 header {
@@ -179,12 +194,7 @@ header {
     justify-content: center;
     align-items: center;
     padding-top: 1rem;
-    background: linear-gradient(
-        45deg,
-        var(--color-pink) 0%,
-        var(--color-light2) 50%,
-        var(--color-blue3) 100%
-    );
+    background-color: var(--color-light1);
 }
 
 #pic {
@@ -223,8 +233,12 @@ h1 {
     display: flex;
     width: 100%;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 2rem;
-    margin-bottom: 1.5rem;
+
+    @media (max-width: 768px) {
+        gap: 1rem;
+    }
 }
 
 nav {
@@ -242,6 +256,11 @@ nav {
         align-items: center;
         padding-block: 0.5rem;
         border-radius: 4px;
+
+        @media (max-width: 768px) {
+            justify-content: center;
+            padding-block: 0.75rem;
+        }
     }
 }
 
@@ -273,11 +292,19 @@ nav {
         width: 1.875rem;
         height: 1.875rem;
     }
+
+    @media (max-width: 768px) {
+        display: none;
+    }
 }
 
 main {
     padding-block: 2.5rem;
     color: var(--color-dark1);
+
+    @media (max-width: 768px) {
+        flex-grow: 1;
+    }
 
     section {
         display: none;
@@ -289,22 +316,21 @@ main {
 }
 
 .section-header {
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
 }
 
 .page-description {
-    font-size: 1.375rem;
+    max-width: 40rem;
+    margin-inline: auto;
+    font-size: 1.75rem;
     text-align: center;
     font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: transparent;
-    background: linear-gradient(
-        90deg,
-        var(--color-dark4) 0%,
-        var(--color-blue2) 50%,
-        var(--color-dark4) 100%
-    );
-    background-clip: text;
+    margin-bottom: 0.875rem;
+    color: var(--color-blue2);
+
+    @media (max-width: 768px) {
+        font-size: 1.5rem;
+    }
 }
 
 #highlights {
@@ -312,15 +338,20 @@ main {
     gap: 2rem;
     justify-content: center;
     font-size: 1.125rem;
+    margin-bottom: 2.25rem;
     font-weight: 700;
 
+    @media (max-width: 768px) {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
     div {
-        color: var(--color-dark4);
+        color: #fff;
         background: linear-gradient(
-            90deg,
-            var(--color-light2) 0%,
-            var(--color-light3) 50%,
-            var(--color-light2) 100%
+            -45deg,
+            var(--color-blue3) 0%,
+            var(--color-green) 100%
         );
         filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.12));
         padding: 0.5rem 0.5rem;
@@ -333,38 +364,45 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 340px;
+        margin-inline: auto;
+        gap: 3rem;
+    }
 }
 
-#contact {
-    #platforms-radios {
+#platforms-radios {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+
+    label {
         display: flex;
-        justify-content: center;
-        gap: 2rem;
-        font-size: 1.25rem;
-        margin-bottom: 1rem;
-        font-weight: 700;
+        flex-direction: row-reverse;
+        gap: 0.5rem;
+        cursor: pointer;
 
-        label {
+        span {
             display: flex;
-            flex-direction: row-reverse;
+            align-items: center;
             gap: 0.5rem;
-            cursor: pointer;
-
-            span {
-                display: flex;
-                align-items: center;
-                gap: 0.5rem;
-                color: var(--color-dark4);
-            }
+            color: var(--color-dark4);
         }
+    }
 
-        .bi-envelope-fill {
-            color: var(--color-red);
-        }
+    .bi-envelope-fill {
+        color: var(--color-red);
+    }
 
-        .bi-whatsapp {
-            color: var(--color-green);
-        }
+    .bi-whatsapp {
+        color: var(--color-darkgreen);
     }
 }
 

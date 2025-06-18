@@ -12,6 +12,10 @@
     overflow: hidden;
     filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.15));
 
+    @media (max-width: 768px) {
+        min-height: 28rem;
+    }
+
     .service-body,
     .service-footer {
         padding: 0 0.75rem 0.75rem 0.75rem;

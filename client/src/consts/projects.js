@@ -3,7 +3,7 @@ const projects = [
         name: 'Meu Estoque',
         description:
             'Sistema de controle de estoque com funcionalidades de comunicação projetado para facilitar a organização de itens relacionados ao trabalho.',
-        tag: 'Sistema Personalizado',
+        tag: 'Sistema',
         thumbnail: './images/meuestoque.png',
         link: 'https://meuestoque.app.br/',
         stack: ['React', 'TypeScript', 'CSS', 'Node.js', 'PostgreSQL'],
@@ -15,13 +15,13 @@ const projects = [
         tag: 'Catálogo',
         thumbnail: './images/whiskylogged.png',
         link: 'https://whiskylogged.vercel.app/',
-        stack: ['React', 'JavaScript', 'SCSS', 'Vite'],
+        stack: ['React', 'JavaScript'],
     },
     {
         name: 'Steam Pick',
         description:
             'Uma ferramenta de automação para análise de perfil e geração personalizada de recomendações de jogos para usuários do Steam.',
-        tag: 'Sistema Personalizado',
+        tag: 'Sistema',
         thumbnail: './images/steampick.png',
         link: 'https://www.steampick.com/',
         stack: ['Next.js', 'TypeScript', 'Tailwind CSS'],

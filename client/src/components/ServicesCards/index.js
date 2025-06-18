@@ -43,7 +43,7 @@ export default function ServicesCards() {
                 .click();
 
             document.querySelector('textarea[name="message"]').value =
-                `Olá, tenho interesse em um ${service.title} ...`;
+                `Olá, tenho interesse em um ${service.title}, gostaria de saber mais sobre o serviço ...`;
         });
     });
 
@@ -52,7 +52,7 @@ export default function ServicesCards() {
             element,
             { opacity: 1, y: [10, 0] },
             {
-                duration: 0.3,
+                duration: 0.5,
                 easing: [0.17, 0.55, 0.55, 1],
             }
         );

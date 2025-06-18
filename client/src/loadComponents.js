@@ -3,17 +3,17 @@ import ServicesCards from './components/ServicesCards';
 import ProjectsList from './components/ProjectsList';
 import ContactForm from './components/ContactForm';
 
-export default function loadComponents(activeSection) {
-    if (activeSection === 'home' || !activeSection) {
+export default function loadComponents(page) {
+    if (page === 'home') {
         TechStackList();
         ServicesCards();
     }
 
-    if (activeSection === 'projects') {
+    if (page === 'projects') {
         ProjectsList();
     }
 
-    if (activeSection === 'contact') {
+    if (page === 'contact') {
         ContactForm();
     }
 }

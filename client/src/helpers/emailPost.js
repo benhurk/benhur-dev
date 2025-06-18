@@ -18,7 +18,7 @@ export default async function emailPost(data) {
         const result = await res.json();
 
         if (res.ok) {
-            resultP.textContent = 'Mensagem enviada!';
+            resultP.textContent = 'Mensagem enviada! Retornarei em breve.';
             resultP.className = 'success';
         } else {
             throw new Error(result.message || 'Failed to send email.');

@@ -1,7 +1,7 @@
 import emailPost from '../../helpers/emailPost';
 import validateContactForm from '../../helpers/validateContactForm';
 import renderForm from './renderForm';
-import { WPP_NUM } from '../../consts/CONSTS';
+import { WPP_NUM } from '../../consts/consts';
 
 export default function ContactForm() {
     let selectedRadio = document.querySelector(

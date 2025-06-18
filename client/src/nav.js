@@ -1,34 +1,24 @@
-import loadComponents from './loadComponents';
+import loadContent from './loadContent';
 
 const navButtons = document.querySelectorAll('#nav-links a');
 
-export default function nav(initialSection) {
-    const loadedSections = [initialSection];
-
+export default function nav() {
     navButtons.forEach((nav) => {
         nav.addEventListener('click', (e) => {
             e.preventDefault();
-            const targetSection = nav.dataset.section;
-            window.location.hash = targetSection;
+            const targetSection = nav.getAttribute('href');
 
-            if (!loadedSections.includes(targetSection)) {
-                loadedSections.push(targetSection);
-                loadComponents(targetSection);
+            if (targetSection != window.location.pathname) {
+                window.history.pushState({}, '', targetSection);
+
+                loadContent(targetSection);
+
+                document
+                    .querySelector('.nav-current')
+                    .classList.remove('nav-current');
+
+                nav.classList.add('nav-current');
             }
-
-            document
-                .querySelector('.nav-current')
-                .classList.remove('nav-current');
-
-            document
-                .querySelector('.active-section')
-                .classList.remove('active-section');
-
-            document
-                .getElementById(targetSection)
-                .classList.add('active-section');
-
-            nav.classList.add('nav-current');
         });
     });
 }
