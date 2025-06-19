@@ -1,11 +1,15 @@
 import express from "express";
 import cors from "cors";
 import sendEmail from "./send-email.js";
+import "dotenv/config";
 
 const app = express();
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin:
+      process.env.NODE_ENV === "development"
+        ? "http://localhost:5173"
+        : process.env.CLIENT_URL,
   }),
 );
 app.use(express.json());

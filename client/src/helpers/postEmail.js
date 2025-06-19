@@ -1,6 +1,6 @@
 const URL = import.meta.env.DEV
     ? 'http://localhost:8080/send-email'
-    : '/send-email';
+    : `${process.env.SERVER_URL}/send-email`;
 
 export default async function postEmail(data) {
     const resultP = document.getElementById('contact-result');

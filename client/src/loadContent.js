@@ -1,17 +1,24 @@
 import { animate, inView } from 'motion';
+import homeHtml from '../public/pages/home.html?raw';
+import projectsHtml from '../public/pages/projects.html?raw';
+import contactHtml from '../public/pages/contact.html?raw';
 import loadComponents from './loadComponents';
-import { PAGES } from './consts/consts';
 
+const PAGES = {
+    home: homeHtml,
+    projects: projectsHtml,
+    contact: contactHtml,
+};
 const wraper = document.getElementById('content');
 
-export default async function loadContent(page) {
+export default function loadContent(page) {
     page = page.split('/')[1] || 'home';
 
     try {
-        if (!PAGES.includes(page)) throw new Error('Page not found.');
-        const res = await fetch(`/pages/${page}.html`);
+        if (!Object.keys(PAGES).includes(page))
+            throw new Error('Page not found.');
 
-        const html = await res.text();
+        const html = PAGES[page];
 
         wraper.innerHTML = html;
         loadComponents(page);
