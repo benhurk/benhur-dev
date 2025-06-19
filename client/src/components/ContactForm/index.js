@@ -1,4 +1,4 @@
-import emailPost from '../../helpers/emailPost';
+import postEmail from '../../helpers/postEmail';
 import validateContactForm from '../../helpers/validateContactForm';
 import renderForm from './renderForm';
 import { WPP_NUM } from '../../consts/consts';
@@ -26,7 +26,7 @@ export default function ContactForm() {
             );
 
             if (validate.success) {
-                await emailPost(data);
+                await postEmail(data);
                 e.target.reset();
             } else {
                 const resultP = document.getElementById('contact-result');

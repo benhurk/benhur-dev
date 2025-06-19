@@ -11,7 +11,7 @@ const projects = [
     {
         name: 'WhiskyLogged',
         description:
-            'Site de catálogo com foco na apresentação dos produtos e experiência de usuário fluida e interativa.',
+            'Site de catálogo e review de bebidas com foco na apresentação dos produtos e experiência de usuário fluida e interativa.',
         tag: 'Catálogo',
         thumbnail: './images/whiskylogged.png',
         link: 'https://whiskylogged.vercel.app/',
@@ -29,7 +29,7 @@ const projects = [
     {
         name: 'Landing',
         description:
-            'Página de conversão responsiva e moderna projetada para capturar a atenção do público-alvo',
+            'Página de conversão responsiva e moderna projetada para capturar a atenção do público-alvo.',
         tag: 'Landing Page',
         thumbnail: './images/landing.png',
         link: '',

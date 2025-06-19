@@ -1,6 +1,6 @@
 const URL = 'http://localhost:8080/send-email';
 
-export default async function emailPost(data) {
+export default async function postEmail(data) {
     const resultP = document.getElementById('contact-result');
     const submitBtn = document.getElementById('contact-submit');
     const loader = document.getElementById('contact-loader');
