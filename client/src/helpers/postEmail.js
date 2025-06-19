@@ -1,4 +1,6 @@
-const URL = 'http://localhost:8080/send-email';
+const URL = import.meta.env.DEV
+    ? 'http://localhost:8080/send-email'
+    : '/send-email';
 
 export default async function postEmail(data) {
     const resultP = document.getElementById('contact-result');
