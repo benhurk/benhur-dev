@@ -38,12 +38,11 @@ export default function ServicesCards() {
                 (s) => s.title === e.target.dataset.service
             )[0];
 
-            document
-                .querySelector('#nav-links a[data-section="contact"]')
-                .click();
+            document.querySelector('#nav-links a[href="/contact"]').click();
 
-            document.querySelector('textarea[name="message"]').value =
-                `Olá, tenho interesse em um ${service.title}, gostaria de saber mais sobre o serviço ...`;
+            const textarea = document.querySelector('textarea[name="message"]');
+            textarea.value = `Olá, tenho interesse em um ${service.title}, ...`;
+            textarea.focus();
         });
     });
 

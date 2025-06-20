@@ -1,9 +1,15 @@
 import { WPP_NUM } from './consts/consts';
+import PAGES from './pages/pages';
 import nav from './nav';
 import loadContent from './loadContent';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const initialPage = window.location.pathname || 'home';
+    let initialPage = window.location.pathname || 'home';
+
+    if (!Object.keys(PAGES).includes(initialPage.split('/')[1])) {
+        window.history.replaceState({}, '', '/');
+        initialPage = '/';
+    }
 
     loadContent(initialPage);
 
