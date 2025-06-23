@@ -315,7 +315,7 @@ nav {
 }
 
 main {
-    padding-block: 2.5rem;
+    padding-block: 3.5rem;
     color: var(--color-dark1);
 
     @media (max-width: 768px) {

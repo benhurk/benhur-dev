@@ -2,9 +2,9 @@ const services = [
     {
         title: 'Site Institucional / Landing Page',
         img: './images/landing.png',
-        exampleLink: 'https://whiskylogged.vercel.app/',
+        exampleLink: 'https://landing-example-three.vercel.app/',
         description:
-            'Desenvolvimento de sites modernos para destacar sua marca ou serviços.',
+            'Desenvolvimento de sites modernos para apresentar seus serviços e aumentar seu alcance.',
         highlight: '🎨 Design personalizado',
     },
     {

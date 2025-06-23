@@ -15,7 +15,7 @@ const projects = [
         tag: 'Catálogo',
         thumbnail: './images/whiskylogged.png',
         link: 'https://whiskylogged.vercel.app/',
-        stack: ['React', 'JavaScript'],
+        stack: ['HTMX', 'Tailwind CSS', 'Go'],
     },
     {
         name: 'Steam Pick',
@@ -27,13 +27,13 @@ const projects = [
         stack: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     },
     {
-        name: 'Landing',
+        name: 'Modelo de Landing Page',
         description:
-            'Página de conversão responsiva e moderna projetada para capturar a atenção do público-alvo.',
+            'Modelo demonstrativo de landing page para pequenos negócios.',
         tag: 'Landing Page',
         thumbnail: './images/landing.png',
-        link: '',
-        stack: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+        link: 'https://landing-example-three.vercel.app/',
+        stack: ['HTML', 'CSS', 'JavaScript'],
     },
 ];
 
