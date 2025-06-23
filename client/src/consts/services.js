@@ -2,7 +2,7 @@ const services = [
     {
         title: 'Site Institucional / Landing Page',
         img: './images/landing.png',
-        exampleLink: 'https://landing-example-three.vercel.app/',
+        exampleLink: 'https://benhurk.github.io/Landing-Model/',
         description:
             'Desenvolvimento de sites modernos para apresentar seus serviços e aumentar seu alcance.',
         highlight: '🎨 Design personalizado',

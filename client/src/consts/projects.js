@@ -32,7 +32,7 @@ const projects = [
             'Modelo demonstrativo de landing page para pequenos negócios.',
         tag: 'Landing Page',
         thumbnail: './images/landing.png',
-        link: 'https://landing-example-three.vercel.app/',
+        link: 'https://benhurk.github.io/Landing-Model/',
         stack: ['HTML', 'CSS', 'JavaScript'],
     },
 ];
